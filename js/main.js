@@ -1,5 +1,5 @@
 const gameBoard = {
-    gameBoard: [],
+
 }
 
 function createPlayer(name, symbol, turn = false) {
@@ -9,7 +9,12 @@ function createPlayer(name, symbol, turn = false) {
 let playerOne = createPlayer('playerOne', 'X', true);
 let playerTwo = createPlayer('playerTwo', 'O');
 
-function createGameBoard() { }
+let columns = 3;
+let rows = 3;
+
+function createGameBoard(columns, rows) {
+
+}
 
 // creates a 3 by 3 grid of arrays using columns and rows.
 
