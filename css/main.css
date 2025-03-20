@@ -1,103 +1,112 @@
-/* ====================================================================
-   MAIN.CSS - STRUCTURE TEMPLATE
-   Description: This file provides a logical framework for styling
-   any website, with clearly defined sections for organization.
-   ==================================================================== */
+/* Main CSS for Tic Tac Toe landing page */
 
-/* ==========================
-   2. GLOBAL STYLES (BODY & ROOT ELEMENTS)
-   ========================== */
+:root {
+  --primary-color: #3a4750;
+  --accent-color: #f05454;
+  --light-color: #f9f9f9;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
 
 body {
-  /* Styles for the website body */
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(135deg, #f9f9f9 0%, #e6e6e6 100%);
+  color: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  line-height: 1.6;
 }
 
-/* ==========================
-   3. LAYOUT STRUCTURE
-   ========================== */
-
-/* ---- HEADER SECTION ---- */
-header {
-    /* Styles for the website header */
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--primary-color);
+  letter-spacing: -0.5px;
+  position: relative;
 }
 
-/* ---- NAVIGATION (PRIMARY NAVBAR) ---- */
-nav {
-    /* Styles for the main navigation menu */
+.description {
+  text-align: center;
+  max-width: 65ch;
+  margin: 0 auto 1rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
-/* ---- MAIN CONTENT AREA ---- */
-main {
-    /* Styles for the main content wrapper */
+.game-name {
+  color: var(--accent-color);
+  font-weight: 600;
 }
 
-/* ---- SECTIONS WITHIN MAIN ---- */
-main section {
-    /* General styles for sections inside main */
+.lang-type {
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0.85;
 }
 
-/* ---- FOOTER SECTION ---- */
-footer {
-    /* Styles for the website footer */
+.directions {
+  text-align: center;
+  max-width: 75ch;
+  margin: 0 auto 2rem;
+  color: var(--primary-color);
+  font-weight: 300;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.6;
+  opacity: 0.8;
 }
 
-/* ---- FOOTER NAVIGATION (OPTIONAL) ---- */
-footer nav {
-    /* Footer-specific navigation styles */
+.btn-start {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* ==========================
-   4. TYPOGRAPHY (TEXT ELEMENTS)
-   ========================== */
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  /* Styles for headings */
+.btn-start:hover {
+  background-color: #e04545;
+  /* Slightly darker shade on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Paragraphs */
-p {
-  /* Styles for paragraph text */
+.btn-start:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Links */
-a {
-  /* Styles for links */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  #gameBoard {
+    width: 90%;
+  }
 }
 
-/* Lists */
-ul, ol {
-  /* Styles for unordered and ordered lists */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #gameBoard {
+    width: 95%;
+  }
 }
-
-li {
-    /* Styles for list items */
-}
-
-/* Icons */
-i {
-  /* Styles for font-based icons (e.g., FontAwesome) */
-}
-
-/* Images */
-img {
-  /* Styles for images */
-}
-
-/* ==========================
-   5. FORM ELEMENTS
-   ========================== */
-
-form {
-    /* Styles for form container */
-}
-
-input, textarea, select, button {
-    /* Base styling for form elements */
-}
-
-/* ==========================
-   6. UTILITIES & HELPERS
-   ========================== */
-
-/* Helper classes for spacing, alignment, visibility, etc. */
