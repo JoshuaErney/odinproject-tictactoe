@@ -1,15 +1,17 @@
 const btnStart = document.querySelector("#startGame");
 
 const gameBoard = {
-    // creates a 3 by 3 grid of arrays using columns and rows.
-    createGameBoard() { },
+    boardGrid: [],
+    createBoardGrid() {
+        let boardGrid = 0;
+        if (boardGrid = 0, boardGrid <= 9, boardGrid++) {
 
-    // Use array.length = 0, to reset each array. 
-    // I'll need to use forEach to navigate through each array.
+        }
+    },
     resetGameBoard() { },
 }
 
-const Players = {
+const players = {
 
     createPlayer(name, symbol, turn = false) {
         return { name, symbol, turn };
@@ -17,10 +19,20 @@ const Players = {
 
     takeTurn() { },
 
-    // check to see if the square they click is empty or not, 
-    // if empty, it will fill in that square with their "symbol"
     checkVictory() { },
 }
 
-let playerOne = gameBoard.createPlayer('playerOne', 'X', true);
-let playerTwo = gameBoard.createPlayer('playerTwo', 'O');
+const gameFlow = {}
+
+let playerOne = Players.createPlayer('playerOne', 'X', true);
+let playerTwo = Playerscg.createPlayer('playerTwo', 'O');
+
+// Module Pattern (JavaScript)
+//  (function() {
+//  The private variables or functions goes here.
+// return {
+//      We return the variables or functions here.
+// }
+// }) ();
+
+// const SomeModule = (function() {})();
