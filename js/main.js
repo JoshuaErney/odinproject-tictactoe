@@ -1,38 +1,32 @@
 const btnStart = document.querySelector("#startGame");
+btnStart.addEventListener('click', () => {
+    return startGame();
+})
 
-const gameBoard = {
-    boardGrid: [],
-    createBoardGrid() {
-        let boardGrid = 0;
-        if (boardGrid = 0, boardGrid <= 9, boardGrid++) {
+const startGame = (function () {
 
-        }
-    },
-    resetGameBoard() { },
-}
+    function Players() {
+        function createPlayer() { };
+        return { createPlayer };
+    }
 
-const players = {
+    function Board() {
+        function createBoard() { };
+        function resetBoard() { };
+        return { createBoard, resetBoard };
+    }
 
-    createPlayer(name, symbol, turn = false) {
-        return { name, symbol, turn };
-    },
+    function Logic() {
+        function createFlow() { };
+        function takeTurn() { };
+        function checkVictory() { };
+        return { takeTurn, checkVictory, createFlow };
+    }
 
-    takeTurn() { },
+    return {};
 
-    checkVictory() { },
-}
+})();
 
-const gameFlow = {}
+// "player one" gets five turns while "player two" gets four turns. Its possible to have fewer turns if a player wins before turn nine.
 
-let playerOne = Players.createPlayer('playerOne', 'X', true);
-let playerTwo = Playerscg.createPlayer('playerTwo', 'O');
-
-// Module Pattern (JavaScript)
-//  (function() {
-//  The private variables or functions goes here.
-// return {
-//      We return the variables or functions here.
-// }
-// }) ();
-
-// const SomeModule = (function() {})();
+// Turn five is the earliest that "player one" could win which would be their third piece placed. Turn six is the earliest "player 2" could win which would be their third piece that was placed.
