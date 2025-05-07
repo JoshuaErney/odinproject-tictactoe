@@ -13,48 +13,24 @@ const startGame = (function () {
     // Game board module
     const gameBoard = (function () {
         let board;
-
         function createBoard() {
-            board = Array(9).fill(null);
+            board = Array(9).fill('');
             return board;
         }
 
-        function resetBoard() {
-            return createBoard();
-        }
-
         // Public API
-        return { createBoard, resetBoard };
+        return { createBoard };
     })();
 
     // Game logic module
     const gameLogic = (function () {
-        function takeTurn() {
-            // Implementation here
-        }
-
-        function checkVictory() {
-            // Implementation here
-        }
+        function currentPlayer() { }
+        function takeTurn() { }
+        function checkVictory() { }
 
         // Public API
         return { takeTurn, checkVictory };
     })();
-
-    // Function to start a new game
-    return function (name1, name2) {
-        const player1 = createPlayer(name1, 'X', 1);
-        const player2 = createPlayer(name2, 'O', 2);
-
-        // Initialize the board
-        const board = gameBoard.createBoard();
-
-        // Return the game state and methods
-        return {
-            player1,
-            player2
-        };
-    };
 })();
 
 /* 
